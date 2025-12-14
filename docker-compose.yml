@@ -1,0 +1,7 @@
+services:
+  docling-app:
+    build: .
+    stdin_open: true
+    tty: true
+    volumes:
+      - ./documents:/app/documents
