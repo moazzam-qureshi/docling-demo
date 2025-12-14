@@ -10,7 +10,8 @@ COPY requirements.txt .
 
 # Install Python dependencies using uv (increased timeout for large packages)
 ENV UV_HTTP_TIMEOUT=300
-RUN uv pip install --system --no-cache -r requirements.txt
+RUN uv pip install --system --no-cache docling --extra-index-url https://download.pytorch.org/whl/cpu
+
 
 # Copy application code
 COPY . .
